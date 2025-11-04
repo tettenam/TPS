@@ -1,0 +1,19 @@
+vettore può contenere non solo stringhe (3 stringa, 1 numerico)
+let array = new array {1,2,3}
+
+let studenti = {"mario", "Luca"}  stringhe 
+studenti [^1]    questo da luca
+studenti [^1] = "gianni"  per modiificare
+studenti.push("anna")   per aggiunge alla fine
+
+
+
+array.lenght restituisce la lunghezza dell'array.
+
+
+⁯Array è una stringa di caratteri
+
+
+pop toglie alla fine
+shift toglie all'inizio
+unshift aggiunge all'inizio
