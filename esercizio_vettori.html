@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Elaborazione numeri casuali</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  td, th {
+    border: 1px solid #333;
+    padding: 6px 10px;
+    text-align: center;
+  }
+  .result {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Elaborazione di 100 numeri casuali</h2>
+
+<div id="output"></div>
+
+<script>
+// 1. Creazione dell'array di 100 numeri casuali tra -100 e 100
+let numeri = [];
+for (let i = 0; i < 100; i++) {
+  let num = Math.floor(Math.random() * 201) - 100; // da -100 a 100
+  numeri.push(num);
+}
+
+// 2. Calcolo media
+let somma = numeri.reduce((a, b) => a + b, 0);
+let media = somma / numeri.length;
+
+// 3. Trova massimo e minimo
+let max = Math.max(...numeri);
+let min = Math.min(...numeri);
+
+// 4. Crea vettore con numeri pari > 50
+let pariMaggiori50 = numeri.filter(n => n % 2 === 0 && n > 50);
+
+// 5. Mostra tutto in una griglia HTML
+let output = `
+  <table>
+    <tr><th colspan="10">Numeri casuali</th></tr>
+  </table>
+
+  <div class="result">
+    <p><strong>Media:</strong> ${media.toFixed(2)}</p>
+    <p><strong>Massimo:</strong> ${max}</p>
+    <p><strong>Minimo:</strong> ${min}</p>
+    <p><strong>Numeri pari > 50:</strong> ${pariMaggiori50.join(", ") || "Nessuno"}</p>
+  </div>
+
+document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>
