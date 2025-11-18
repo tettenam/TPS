@@ -90,15 +90,17 @@
   <script>
     function stampaDati() {
       
-      const dati = [];
+      const dati: {};
 
       
-    dati.push({ label: "Nome", value: document.getElementById("Nome") });
-    dati.push({ label: "Cognome", value:document.getElementById("Cognome")  });
-    dati.push({ label: "Indirizzo", value: document.getElementById("Indirizzo") });
-    dati.push({ label: "Città", value:document.getElementById("Città") });
-    dati.push({ label: "CAP", value: document.getElementById("CAP") });
-    dati.push({ label: "Anno di nascita", value:document.getElementById("Anno di nascita") });
+    dati.nome = document.getElementById("Nome");
+    dati.cognome = document.getElementById("Cognome");
+    dati.indirizzo = document.getElementById("Indirizzo");
+    dati.città = document.getElementById("Città");
+    dati.CAP = document.getElementById("CAP");
+    dati.annodinascita = document.getElementById("Anno di nascita");
+
+
       
       if (!(dati[0] && dati[1] && dati[5])) {
         alert("Compila almeno Nome, Cognome e Anno di nascita!");
@@ -133,7 +135,7 @@
         default:
           gen = "Anno non valido o troppo lontano nel tempo";
       }
-    console.log(dati);
+     dati.nome = document.getElementById(nome)InnexHTML = <strong> +nome </strong>
     }
   </script>
 </body>
