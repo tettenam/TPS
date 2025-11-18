@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo Semplice</title>
+</head>
+<body>
+
+    <h2>Inserisci i tuoi dati</h2>
+
+    <input type="text" id="nome" placeholder="Nome"><br><br>
+    <input type="text" id="cognome" placeholder="Cognome"><br><br>
+    <input type="text" id="indirizzo" placeholder="Indirizzo"><br><br>
+
+    <button onclick="mostraDati()">Mostra Dati</button>
+
+    <div id="risultato" style="display: none; margin-top: 20px;">
+        <p id="datiInseriti"></p>
+    </div>
+
+    <script>
+        function mostraDati() {
+            var nome = document.getElementById("nome").value;
+            var cognome = document.getElementById("cognome").value;
+            var indirizzo = document.getElementById("indirizzo").value;
+
+            if (nome !== "") {
+                var testo = "Nome: " + nome + "<br>" +
+                            "Cognome: " + cognome + "<br>" +
+                            "Indirizzo: " + indirizzo;
+
+                document.getElementById("datiInseriti").innerHTML = testo;
+                document.getElementById("risultato").style.display = "block";
+            } else {
+                alert("Inserisci almeno il nome.");
+                document.getElementById("risultato").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
