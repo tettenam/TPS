@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vestiti di marca: Gucci, Nike, Adidas e altri">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav aria-label="menu principale">
+    <img src="LOGO.png" alt="Logo sito" width="80">
+    <a href="home.html">Home</a>
+    <a href="eventi.html">Eventi</a>
+    <a href="profilo.html">Profilo</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Vestiti di Marca</h1>
+  <p>Scopri le migliori collezioni</p>
+</section>
+
+<!-- PRODOTTI -->
+<section aria-label="vestiti">
+  <h2>I nostri prodotti</h2>
+
+  <article>
+    <img src="GUCCI.webp" alt="Gucci" width="200">
+    <p>Prezzo: 500€</p>
+    <p>Alta qualità, stile elegante</p>
+  </article>
+
+  <article>
+    <img src="LUIS VITTUON.jpg" alt="Louis Vuitton" width="200">
+    <p>Prezzo: 700€</p>
+    <p>Lusso e design unico</p>
+  </article>
+
+  <article>
+    <img src="BALENCIAGA.webp" alt="Balenciaga" width="200">
+    <p>Prezzo: 650€</p>
+    <p>Stile moderno</p>
+  </article>
+
+  <article>
+    <img src="NIKE.webp" alt="Nike" width="200">
+    <p>Prezzo: 120€</p>
+    <p>Comodo e sportivo</p>
+  </article>
+
+  <article>
+    <img src="ADIDAS.jpg" alt="Adidas" width="200">
+    <p>Prezzo: 100€</p>
+    <p>Perfetto per ogni giorno</p>
+  </article>
+
+</section>
+
+<!-- COME ARRIVARE -->
+<section aria-label="negozi">
+  <h2>Dove trovarci</h2>
+  <p>Puoi trovare questi prodotti nei negozi principali delle grandi città.</p>
+  <p>📍 Centro città</p>
+  <p>🚇 Metropolitana linea principale</p>
+  <p>🚌 Autobus fermata centro</p>
+</section>
+
+<!-- CONTATTI -->
+<section aria-label="iscrizione evento">
+  <h2>Iscriviti</h2>
+  <form id="mioForm">
+    <label for="nome">Nome</label><br>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <button type="submit">Partecipa</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById('mioForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    
+    
+    const nomeInserito = document.getElementById('nome').value;
+    
+    
+    localStorage.setItem('utenteNome', nomeInserito);
+    
+    
+    window.location.href = 'profilo.html';
+  });
+</script>
+
+</main>
+
+<footer>
+  <p>Seguici</p>
+  <a href="#">Instagram</a>
+  <a href="#">Facebook</a>
+</footer>
+
+</body>
+</html>
