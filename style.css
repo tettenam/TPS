@@ -1,37 +1,261 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f4f8;
-    text-align: center;
-    margin-top: 80px;
+/* RESET BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2 {
-    color: #333;
+:root {
+  --colore-sfondo: #c1121f; /* rosso */
+  --colore-testo: #ffffff;
+  --colore-secondario: #f8f9fa;
+  --spazio: 16px;
+  --radius: 10px;
+  --font: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  padding: var(--spazio);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a, nav button {
+  text-decoration: none;
+  color: var(--colore-testo);
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav button:hover {
+  background-color: white;
+  color: var(--colore-sfondo);
+}
+
+nav a:focus,
+button:focus {
+  outline: 2px solid yellow;
+}
+
+.hero img {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
+
+section {
+  padding: var(--spazio);
+}
+
+section article {
+  background-color: rgba(255,255,255,0.1);
+  margin: 10px;
+  padding: 15px;
+  border-radius: var(--radius);
+  transition: transform 0.3s;
+}
+
+section article:hover {
+  transform: scale(1.05);
+}
+
+/* FORM ISCRIZIONE */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 input {
-    padding: 10px;
-    margin: 8px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: none;
+  width: 100%;
+  max-width: 300px;
 }
 
 button {
-    padding: 10px 25px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: white;
+  color: var(--colore-sfondo);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: #357abd;
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
-p {
-    font-size: 18px;
-    color: #444;
-    margin-top: 20px;
+/* SEZIONE EVENTO (Immagine di fianco al testo) */
+.evento-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.evento-content {
+    display: flex;          
+    align-items: center; 
+    justify-content: center;
+    gap: 30px;              
+    flex-wrap: wrap; 
+    text-align: left; /* Il testo dell'evento si legge meglio a sinistra */
+}
+
+.evento-img {
+    flex: 1;                
+    max-width: 450px;       
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 2px solid white;
+}
+
+.evento-content article {
+    flex: 1;                
+    min-width: 300px;
+    background-color: rgba(255,255,255,0.15); /* Leggermente più chiaro per staccare */
+}
+
+/* --- NUOVA PARTE: PAGINA PROFILO --- */
+#sezione-dati {
+    background-color: white;
+    color: var(--colore-sfondo);
+    padding: 30px;
+    border-radius: var(--radius);
+    display: inline-block;
+    margin-top: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#display-nome {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  padding: var(--spazio);
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  section:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+  }
+
+  section article {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .hero img {
+    max-width: 400px;
+  }
+}
+.profile-grid {
+    display: flex;         /* Mette i figli di fianco */
+    justify-content: center; /* Centra i blocchi nella pagina */
+    align-items: stretch;  /* Li rende tutti della stessa altezza */
+    gap: 20px;             /* Spazio tra un blocco e l'altro */
+    flex-wrap: wrap;       /* Se lo schermo è piccolo, vanno uno sotto l'altro */
+    margin-top: 40px;
+}
+
+.profile-grid {
+    display: flex;
+    flex-direction: row;      /* Forza la disposizione in riga */
+    justify-content: center;  /* Centra i blocchi */
+    align-items: stretch;     /* IMPORTANTE: li rende tutti alti uguali */
+    gap: 20px;                /* Spazio tra i blocchi */
+    margin: 40px auto;
+    max-width: 1100px;        /* Limita la larghezza totale */
+}
+
+.card-profilo {
+    background-color: white;
+    color: var(--colore-sfondo);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    
+    flex: 1;                  /* Forza ogni card a occupare lo stesso spazio */
+    min-width: 200px;         /* Impedisce che diventino troppo strette */
+    
+    display: flex;            /* Serve per allineare il testo internamente */
+    flex-direction: column;
+    justify-content: center;  /* Centra il testo verticalmente nella card */
+    text-align: center;
+}
+
+/* Stile per i titoli nelle card */
+.card-profilo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--colore-sfondo);
+    padding-bottom: 5px;
+}
+
+#display-nome {
+    font-size: 1.8rem;
+    color: var(--colore-sfondo);
+    margin: 10px 0;
+}
+
+/* RESPONSIVE: Solo se lo schermo è molto piccolo (cellulare) vanno uno sotto l'altro */
+@media (max-width: 768px) {
+    .profile-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-profilo {
+        width: 100%;
+        max-width: 400px;
+    }
 }

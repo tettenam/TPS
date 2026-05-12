@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profilo utente fashion">
+  <link rel="stylesheet" href="style.css">
+  <title>Profilo</title>
+</head>
+
+<body>
+
+<header>
+  <nav aria-label="menu principale">
+    <img src="logo.png" alt="Logo sito" width="80">
+    <a href="home.html">Home</a>
+    <a href="eventi.html">Eventi</a>
+    <a href="profilo.html">Profilo</a>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <img src="immagineprofilo.webp" alt="Profilo utente" width="300">
+  <h1>Il tuo profilo</h1>
+</section>
+
+<section class="container">
+    <div class="profile-grid">
+  
+  <div class="card-profilo" id="sezione-dati">
+    <p>Benvenuto,</p>
+    <h2 id="display-nome">Andrea</h2>
+    <p>Status: Cliente Gold</p>
+    <p>I tuoi dati sono stati salvati correttamente.</p>
+  </div>
+
+  <div class="card-profilo">
+    <h3>PREFERENZE</h3>
+    <p>Brand preferiti:</p>
+    <p>Aeterna<br>Luxury Brand</p>
+  </div>
+
+  <div class="card-profilo">
+    <h3>STORICO</h3>
+    <p>Attività:</p>
+    <p>Hai partecipato a 3 eventi</p>
+  </div>
+  <div class="card-profilo">
+    <h3>EVENTO ESCLUSIVO</h3>
+    <p>Partecipi all'evento esclusivo</p>
+  </div>
+  </section>
+</main>
+
+<script>
+  
+  window.onload = function() {
+    const nomeSalvato = localStorage.getItem('utenteNome');
+    
+    if (nomeSalvato) {
+      
+      document.getElementById('display-nome').textContent = nomeSalvato;
+    }
+  };
+</script>
+
+<footer>
+  <p>Seguici</p>
+  <a href="#">Instagram</a>
+  <a href="#">Facebook</a>
+</footer>
+
+</body>
+</html>

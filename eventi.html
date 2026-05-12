@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Evento moda a Milano - vestiti di marca">
+  <title>Eventi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav aria-label="menu principale">
+    <img src="logo.png" alt="Logo sito" width="80">
+    <a href="home.html">Home</a>
+    <a href="eventi.html">Eventi</a>
+    <a href="profilo.html">Profilo</a>
+  </nav>
+</header>
+
+<main>
+
+<section aria-label="evento principale" class="evento-container">
+  <h2>Evento esclusivo</h2>
+  
+  <div class="evento-content"> <img src="EVENTO.webp" alt="Dettaglio evento moda" class="evento-img">
+
+    <article>
+      <h3>📍 Luogo</h3>
+      <p>Galleria vicino al Duomo</p>
+
+      <h3>🕒 Orario</h3>
+      <p>Dalle 18:00 alle 00:00</p>
+
+      <h3>💰 Prezzo</h3>
+      <p>15$ ingresso</p>
+
+      <h3>🍔 Cibo</h3>
+      <p>Sì, buffet incluso</p>
+
+      <h3>👗 Cosa succede</h3>
+      <p>Sfilate di vestiti di marca, musica e incontro con altri appassionati di moda.</p>
+
+      <h3>🎵 Extra</h3>
+      <p>DJ set dal vivo e area foto per social</p>
+    </article>
+  </div>
+</section>
+
+<section aria-label="iscrizione evento">
+  <h2>Iscriviti</h2>
+  <form id="mioForm">
+    <label for="nome">Nome</label><br>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <button type="submit">Partecipa</button>
+  </form>
+</section>
+
+<script>
+  
+  document.getElementById('mioForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Impedisce il ricaricamento della pagina
+    
+    
+    const nomeInserito = document.getElementById('nome').value;
+    
+    
+    localStorage.setItem('utenteNome', nomeInserito);
+    
+    
+    window.location.href = 'profilo.html';
+  });
+</script>
+
+</main>
+
+<footer>
+  <p>Seguici</p>
+  <a href="#" aria-label="Instagram">Instagram</a>
+  <a href="#" aria-label="TikTok">TikTok</a>
+</footer>
+
+</body>
+</html>
