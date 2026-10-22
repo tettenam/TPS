@@ -2,13 +2,71 @@
   {
     "data": "2023-03-08",
     "stato": "ITA",
+    "ricoverati_con_sintomi": 2728,
+    "terapia_intensiva": 97,
+    "totale_ospedalizzati": 2825,
+    "isolamento_domiciliare": 139151,
+    "totale_positivi": 141976,
     "nuovi_positivi": 3817,
-    "deceduti": 188322
+    "dimessi_guariti": 25287210,
+    "deceduti": 188322,
+    "totale_casi": 25617508,
+    "tamponi": 271822310
   },
   {
     "data": "2023-03-01",
     "stato": "ITA",
+    "ricoverati_con_sintomi": 2980,
+    "terapia_intensiva": 105,
+    "totale_ospedalizzati": 3085,
+    "isolamento_domiciliare": 140141,
+    "totale_positivi": 143226,
     "nuovi_positivi": 4100,
-    "deceduti": 188100
+    "dimessi_guariti": 25270000,
+    "deceduti": 188100,
+    "totale_casi": 25601326,
+    "tamponi": 271500000
+  },
+  {
+    "data": "2023-02-22",
+    "stato": "ITA",
+    "ricoverati_con_sintomi": 3200,
+    "terapia_intensiva": 118,
+    "totale_ospedalizzati": 3318,
+    "isolamento_domiciliare": 145000,
+    "totale_positivi": 148318,
+    "nuovi_positivi": 4520,
+    "dimessi_guariti": 25250000,
+    "deceduti": 187900,
+    "totale_casi": 25586218,
+    "tamponi": 271100000
+  },
+  {
+    "data": "2023-02-15",
+    "stato": "ITA",
+    "ricoverati_con_sintomi": 3450,
+    "terapia_intensiva": 130,
+    "totale_ospedalizzati": 3580,
+    "isolamento_domiciliare": 150000,
+    "totale_positivi": 153580,
+    "nuovi_positivi": 4900,
+    "dimessi_guariti": 25220000,
+    "deceduti": 187700,
+    "totale_casi": 25561280,
+    "tamponi": 270700000
+  },
+  {
+    "data": "2023-02-08",
+    "stato": "ITA",
+    "ricoverati_con_sintomi": 3700,
+    "terapia_intensiva": 142,
+    "totale_ospedalizzati": 3842,
+    "isolamento_domiciliare": 158000,
+    "totale_positivi": 161842,
+    "nuovi_positivi": 5300,
+    "dimessi_guariti": 25190000,
+    "deceduti": 187500,
+    "totale_casi": 25539342,
+    "tamponi": 270200000
   }
 ]
