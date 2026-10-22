@@ -1,0 +1,14 @@
+[
+  {
+    "data": "2023-03-08",
+    "stato": "ITA",
+    "nuovi_positivi": 3817,
+    "deceduti": 188322
+  },
+  {
+    "data": "2023-03-01",
+    "stato": "ITA",
+    "nuovi_positivi": 4100,
+    "deceduti": 188100
+  }
+]
