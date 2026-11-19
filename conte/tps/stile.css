@@ -1,0 +1,108 @@
+bbody {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f5;
+    color: #2b2d42;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.intestazione {
+    background-color: #1d3557;
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+    border-bottom: 5px solid #e63946;
+}
+
+.intestazione h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.intestazione p {
+    max-width: 700px;
+    margin: 15px auto 0 auto;
+    font-size: 16px;
+    color: #f1faee;
+}
+
+.pagina {
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.scatola {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #457b9d;
+}
+
+h2 {
+    color: #1d3557;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+select {
+    padding: 10px 14px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #457b9d;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    color: #1d3557;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #e63946;
+}
+
+.risultato {
+    background-color: #f1faee;
+    border-left: 5px solid #e63946;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.risultato h3 {
+    margin: 0 0 5px 0;
+    color: #e63946;
+    font-size: 18px;
+}
+
+.risultato h4 {
+    margin: 0 0 10px 0;
+    color: #1d3557;
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #1d3557;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.fondo {
+    background-color: #1d3557;
+    color: #f1faee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Storia e TPS - Caporetto</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+    <div class="intestazione">
+        <h1 id="titolo">Prima Guerra Mondiale e la Battaglia di Caporetto</h1>
+        <p id="introduzione">1914 - 1918</p>
+    </div>
+
+    <div class="pagina">
+
+
+        <div class="scatola">
+            <h2>1. I Paesi nella Prima Guerra Mondiale</h2>
+            <p>Scegli una nazione dal menu:</p>
+            <select id="menuNazioni" onchange="mostraNazione()">
+                <option value="">-- Seleziona --</option>
+            </select>
+
+            <div class="risultato" id="risultatoNazione">
+                Nessun paese selezionato.
+            </div>
+        </div>
+
+
+        <div class="scatola">
+            <h2>2. Perdite Umane e Militari</h2>
+            <p>Scegli cosa vuoi visualizzare:</p>
+            <select id="menuMorti" onchange="mostraMorti()">
+                <option value="">-- Seleziona --</option>
+            </select>
+
+            <div class="risultato" id="risultatoMorti">
+                Nessun dato selezionato.
+            </div>
+        </div>
+
+        <div class="scatola">
+            <h2>3. Le fasi della Battaglia di Caporetto</h2>
+            <p>Scegli la data per vedere la cartina:</p>
+            
+            <select id="menuTappe" onchange="scegliTappa()"></select>
+
+            <div class="risultato">
+                <h3 id="dataTappa"></h3>
+                <h4 id="titoloTappa"></h4>
+                <p id="testoTappa"></p>
+                <img id="immagineMappa" src="" alt="Cartina della battaglia">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fondo">
+        <p>Lavoro di Gruppo - TPS ed Educazione Civica</p>
+        <p>Fonti: Library of Congress, Encyclopaedia Britannica, USHMM, Artericerca</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

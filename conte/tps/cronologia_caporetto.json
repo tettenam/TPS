@@ -1,0 +1,28 @@
+{
+  "tappe": [
+    {
+      "giorno": "24 Ottobre 1917",
+      "titolo": "Inizio dell'attacco",
+      "testo": "I cannoni austriaci e tedeschi colpiscono le linee italiane nella nebbia.",
+      "foto": "mappa1.jpg"
+    },
+    {
+      "giorno": "25 Ottobre 1917",
+      "titolo": "Lo sfondamento",
+      "testo": "I soldati nemici avanzano nelle valli e circondano i reparti italiani.",
+      "foto": "mappa2.jpg"
+    },
+    {
+      "giorno": "28 Ottobre 1917",
+      "titolo": "La ritirata",
+      "testo": "L'esercito italiano si ritira verso il Veneto insieme a migliaia di civili.",
+      "foto": "mappa3.jpg"
+    },
+    {
+      "giorno": "9 Novembre 1917",
+      "titolo": "La difesa sul Piave",
+      "testo": "Gli italiani fermano il nemico lungo il fiume Piave e sul Monte Grappa.",
+      "foto": "mappa4.jpg"
+    }
+  ]
+}

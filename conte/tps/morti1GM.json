@@ -1,0 +1,22 @@
+{
+  "elenco": [
+    {
+      "tipo": "Tutta la Guerra (Mondo)",
+      "morti": "Circa 9 milioni di soldati",
+      "feriti": "Oltre 21 milioni",
+      "mezzi": "Distrutte migliaia di città, ferrovie e cannoni."
+    },
+    {
+      "tipo": "Italia (Tutta la guerra)",
+      "morti": "650.000 soldati e 589.000 civili",
+      "feriti": "947.000",
+      "mezzi": "Perse moltissime armi, poi ricostruite nel 1918."
+    },
+    {
+      "tipo": "Battaglia di Caporetto (Italia)",
+      "morti": "Circa 11.000 morti e 30.000 feriti",
+      "feriti": "265.000 prigionieri",
+      "mezzi": "Persi oltre 3.150 cannoni e 3.000 mitragliatrici."
+    }
+  ]
+}

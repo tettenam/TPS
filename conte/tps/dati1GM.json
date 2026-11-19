@@ -1,0 +1,24 @@
+{
+  "titolo": "La Prima Guerra Mondiale e Caporetto (1917)",
+  "introduzione": "La Prima Guerra Mondiale iniziò nel 1914. L'Italia entrò in guerra nel 1915. Nell'ottobre 1917 l'esercito italiano subì una grave sconfitta a Caporetto, ma riuscì poi a resistere sul fiume Piave.",
+  "nazioni": [
+    {
+      "nome": "Italia",
+      "alleanza": "Triplice Intesa",
+      "soldati": "5.615.000",
+      "info": "Combatté lungo il fronte alpino e il fiume Isonzo."
+    },
+    {
+      "nome": "Austria-Ungheria",
+      "alleanza": "Imperi Centrali",
+      "soldati": "7.800.000",
+      "info": "Fu il nemico principale dell'Italia."
+    },
+    {
+      "nome": "Germania",
+      "alleanza": "Imperi Centrali",
+      "soldati": "11.000.000",
+      "info": "Aiutò l'Austria a sfondare il fronte a Caporetto."
+    }
+  ]
+}
