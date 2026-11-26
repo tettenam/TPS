@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertitore Valute</title>
+</head>
+<body>
+
+    <h2>Convertitore in Euro</h2>
+
+    <label for="quantita">Quanto vuoi convertire?</label>
+    <input type="number" id="quantita" placeholder="Es. 50">
+    <br><br>
+
+    <label for="divisa">Da quale valuta?</label>
+    <select id="divisa">
+        <option value="USD">Dollari USA (USD)</option>
+        <option value="JPY">Yen Giapponesi (JPY)</option>
+        <option value="GBP">Sterline Inglesi (GBP)</option>
+        <option value="CHF">Franchi Svizzeri (CHF)</option>
+    </select>
+    <br><br>
+
+    <button onclick="converti()">Calcola valore in Euro</button>
+
+    <h3 id="risultato"></h3>
+
+    <script>
+        function converti() {
+            var importo = document.getElementById("quantita").value;
+            var divisaScelta = document.getElementById("divisa").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "https://proxy.cors.dev/https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", false);
+            xhttp.send();
+
+            var xml = xhttp.responseXML;
+            var righe = xml.getElementsByTagName("Cube");
+
+            for (var i = 2; i < righe.length; i++) {
+                var valuta = righe[i].attributes[0].value;
+                var tasso = righe[i].attributes[1].value;
+
+                if (valuta == divisaScelta) {
+                    var totale = importo / tasso;
+                    document.getElementById("risultato").innerHTML = 
+                        importo + " " + divisaScelta + " valgono " + totale + " EUR";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
